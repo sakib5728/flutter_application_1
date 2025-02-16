@@ -25,12 +25,12 @@ class MyApp extends StatelessWidget {
               ),
               backgroundColor: Colors.grey[800],
             ),
-            body: Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+            body: Container (
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Text('4.0',
+                  Text('',
                       style: TextStyle(fontSize: 40.0, color: Colors.grey)),
                   
                   Row(
@@ -70,7 +70,7 @@ class MyApp extends StatelessWidget {
                       borderRadius: BorderRadius.zero,
                     ),
                     ),
-                    child: const Text('SUBMIT'),
+                    child: const Text('khan'),
                   ),
                 ],
               ),
