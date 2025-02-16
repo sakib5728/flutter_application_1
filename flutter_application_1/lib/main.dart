@@ -1,80 +1,80 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        home: Scaffold(
-            appBar: AppBar(
-              centerTitle: true,
-              title: Text(
-                'Flutter Lab-5',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontFamily: 'IndieFlower',
-                  fontSize: 24.0,
-                ),
-              ),
-              backgroundColor: Colors.grey[800],
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        backgroundColor: Colors.white,
+        appBar: AppBar(
+          title: Text("Product Display"),
+          backgroundColor: Colors.orange,
+        ),
+        body:Center(
+          child: ProductCard()
+        ),
+      ),
+    );
+  }
+}
+
+class ProductCard extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 300,
+      padding: EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(10),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black12,
+            blurRadius: 5,
+            spreadRadius: 2,
+          ),
+        ],
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            "50% OFF",
+            style: TextStyle(
+              fontSize: 20.5,
+              fontWeight: FontWeight.bold,
+              color: Colors.black,
             ),
-            body: Container (
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Text('',
-                      style: TextStyle(fontSize: 40.0, color: Colors.grey)),
-                  
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                    Icon(
-                      Icons.account_balance_sharp,
-                      color: Colors.red,
-                      size: 40.0,
-                    ),
-                    Icon(
-                      Icons.mail_sharp,
-                      color: Colors.blue,
-                      size: 40.0,
-                    ),
-                    Icon(
-                      Icons.star,
-                      color: Colors.grey,
-                      size: 40.0,
-                    ),
-                    Icon(
-                      Icons.star,
-                      color: Colors.green,
-                      size: 40.0,
-                    ),
-                    Icon(
-                      Icons.star_border,
-                      color: Colors.blue,
-                      size: 40.0,
-                    ),
-                    ],
-                  ),
-                  SizedBox(height: 20.0),
-                  ElevatedButton(
-                    onPressed: () {},
-                    style: ElevatedButton.styleFrom(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.zero,
-                    ),
-                    ),
-                    child: const Text('khan'),
-                  ),
-                ],
+          ),
+          SizedBox(height: 10),
+          Image.asset('assets/abc.png'),
+          SizedBox(height: 10),
+          Text(
+            "Nike Air Shoes",
+            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+          ),
+          SizedBox(height: 5),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Text(
+                "450",
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.black),
               ),
-            )));
+              SizedBox(width: 10),
+              Text(
+                "500",
+                style: TextStyle(fontSize: 16, decoration: TextDecoration.lineThrough, color: Colors.grey),
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
   }
 }
