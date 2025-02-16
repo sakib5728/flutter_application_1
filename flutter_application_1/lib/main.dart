@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
               backgroundColor: Colors.grey[800],
             ),
             body: Container (
-              child: Row(
+              child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
@@ -34,14 +34,15 @@ class MyApp extends StatelessWidget {
                       style: TextStyle(fontSize: 40.0, color: Colors.grey)),
                   
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                     Icon(
-                      Icons.star,
+                      Icons.account_balance_sharp,
                       color: Colors.red,
                       size: 40.0,
                     ),
                     Icon(
-                      Icons.star,
+                      Icons.mail_sharp,
                       color: Colors.blue,
                       size: 40.0,
                     ),
