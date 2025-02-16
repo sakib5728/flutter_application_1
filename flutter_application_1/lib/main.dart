@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
             appBar: AppBar(
               centerTitle: true,
               title: Text(
-                'Flutter Demo',
+                'Flutter Lab-5',
                 style: TextStyle(
                   color: Colors.white,
                   fontFamily: 'IndieFlower',
@@ -37,7 +37,12 @@ class MyApp extends StatelessWidget {
                     children: [
                     Icon(
                       Icons.star,
-                      color: Colors.grey,
+                      color: Colors.red,
+                      size: 40.0,
+                    ),
+                    Icon(
+                      Icons.star,
+                      color: Colors.blue,
                       size: 40.0,
                     ),
                     Icon(
@@ -47,17 +52,12 @@ class MyApp extends StatelessWidget {
                     ),
                     Icon(
                       Icons.star,
-                      color: Colors.grey,
-                      size: 40.0,
-                    ),
-                    Icon(
-                      Icons.star,
-                      color: Colors.grey,
+                      color: Colors.green,
                       size: 40.0,
                     ),
                     Icon(
                       Icons.star_border,
-                      color: Colors.grey,
+                      color: Colors.blue,
                       size: 40.0,
                     ),
                     ],
